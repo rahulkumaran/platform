@@ -10,6 +10,7 @@ import TopNav from './components/nav/TopNav';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import { CollectionOne, TankWars, Spiritopoly, AuguryFinance } from './pages/collection-one';
+import { CollectionTwo, TankWars2, Spiritopoly2, AuguryFinance2 } from './pages/collection-two';
 import Team from './pages/Team';
 import Container from 'react-bootstrap/Container'
 
@@ -45,10 +46,18 @@ function App() {
           <Col xs={11} md={9} lg={9} xl={9} xxl={10}>
             <Switch>
               <Route path='/home' exact component={Home} />
+
+              {/* collection 1 */}
               <Route path='/collection-one' exact component={CollectionOne} />
               <Route path='/collection-one/tankwars' exact component={TankWars} />
               <Route path='/collection-one/spiritopoly' exact component={Spiritopoly} />
               <Route path='/collection-one/auguryfinance' exact component={AuguryFinance} />
+
+              {/* collection 2 */}
+              <Route path='/collection-two' exact component={CollectionTwo} />
+              <Route path='/collection-two/tankwars' exact component={TankWars2} />
+              <Route path='/collection-two/spiritopoly' exact component={Spiritopoly2} />
+              <Route path='/collection-two/auguryfinance' exact component={AuguryFinance2} />
               <Route path='/team' exact component={Team} />
             </Switch>
           </Col>

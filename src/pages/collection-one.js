@@ -4,7 +4,7 @@ export const CollectionOne = () => {
   return (
     <div >
       <h1>
-        test
+        This is collection one!
 
       </h1>
     </div>

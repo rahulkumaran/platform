@@ -84,6 +84,7 @@ const DropdownLink = styled(Link)`
 
   &:hover {
     background: #632ce4;
+    color: white;
     cursor: pointer;
   }
 `;

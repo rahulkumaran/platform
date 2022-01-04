@@ -53,36 +53,63 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'Products',
-    path: '/products',
-    icon: <FaIcons.FaCartPlus />
-  },
-  {
-    title: 'Team',
-    path: '/team',
-    icon: <IoIcons.IoMdPeople />
-  },
-  {
-    title: 'Messages',
-    path: '/messages',
-    icon: <FaIcons.FaEnvelopeOpenText />,
-
+    title: 'Collection 2',
+    path: '/collection-two',
+    icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
     subNav: [
       {
-        title: 'Message 1',
-        path: '/messages/message1',
-        icon: <IoIcons.IoIosPaper />
+        title: 'Tank Wars 2',
+        path: '/collection-two/tankwars',
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
       },
       {
-        title: 'Message 2',
-        path: '/messages/message2',
+        title: 'Spiritopoly 2',
+        path: '/collection-two/spiritopoly',
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
+      },
+      {
+        title: 'Augury Finance 2',
+        path: '/collection-two/auguryfinance',
         icon: <IoIcons.IoIosPaper />
       }
     ]
   },
+  // {
+  //   title: 'Products',
+  //   path: '/products',
+  //   icon: <FaIcons.FaCartPlus />
+  // },
+  {
+    title: 'Team',
+    path: '/team',
+    icon: <IoIcons.IoMdPeople />
+  },
+  // {
+  //   title: 'Messages',
+  //   path: '/messages',
+  //   icon: <FaIcons.FaEnvelopeOpenText />,
+
+  //   iconClosed: <RiIcons.RiArrowDownSFill />,
+  //   iconOpened: <RiIcons.RiArrowUpSFill />,
+
+  //   subNav: [
+  //     {
+  //       title: 'Message 1',
+  //       path: '/messages/message1',
+  //       icon: <IoIcons.IoIosPaper />
+  //     },
+  //     {
+  //       title: 'Message 2',
+  //       path: '/messages/message2',
+  //       icon: <IoIcons.IoIosPaper />
+  //     }
+  //   ]
+  // },
   {
     title: 'Support',
     path: '/support',
