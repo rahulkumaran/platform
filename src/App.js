@@ -40,10 +40,10 @@ function App() {
       <TopNav sidebarToggle={sidebarToggle} showSidebar={sidebar} />
       <Container>
         <Row>
-          <Col xs={1} md={3} lg={3} xl={3} xxl={2}>
+          <Col lg={3} xl={3} xxl={2}>
             <Sidebar showSidebar={sidebar} closeSidebar={closeSidebar} />
           </Col>
-          <Col xs={11} md={9} lg={9} xl={9} xxl={10}>
+          <Col xs={12} s={12} md={12} lg={9} xl={9} xxl={10}>
             <Switch>
               <Route path='/home' exact component={Home} />
 

@@ -61,7 +61,7 @@ const SidebarNav = styled.nav`
   transition: 150ms;
   z-index: 10;
 
-  @media (max-width: 850px) {
+  @media (max-width: 992px) {
     width: 100vw;
     left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   } 

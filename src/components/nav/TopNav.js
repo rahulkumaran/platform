@@ -110,14 +110,17 @@ const TopNav = ({ sidebarToggle, showSidebar }) => {
               </SocialAnchor>
             </SocialsWrapper>
             <WalletCard />
+
+            {/* only for small devices */}
+            <NavIconCross to='#'>
+              {!showSidebar ?
+                <FaIcons.FaBars onClick={sidebarToggle} /> :
+                <AiIcons.AiOutlineClose onClick={sidebarToggle} />
+              }
+            </NavIconCross>
           </RightPlacement>
 
-          <NavIconCross to='#'>
-            {!showSidebar ?
-              <FaIcons.FaBars onClick={sidebarToggle} /> :
-              <AiIcons.AiOutlineClose onClick={sidebarToggle} />
-            }
-          </NavIconCross>
+
         </Nav>
       </IconContext.Provider>
     </>);
@@ -148,7 +151,7 @@ const NavIcon = styled(Link)`
 
 const NavIconCross = styled(NavIcon)`
 margin-right: 10px;
-@media (min-width: 850px) {
+@media (min-width: 992px) {
  display: none;
 }
 `
