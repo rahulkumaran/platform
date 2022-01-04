@@ -6,48 +6,48 @@ import * as RiIcons from 'react-icons/ri';
 
 export const SidebarData = [
   {
-    title: 'Overview',
-    path: '/overview',
+    title: 'Home',
+    path: '/home',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
-    subNav: [
-      {
-        title: 'Users',
-        path: '/overview/users',
-        icon: <IoIcons.IoIosPaper />
-      },
-      {
-        title: 'Revenue',
-        path: '/overview/revenue',
-        icon: <IoIcons.IoIosPaper />
-      }
-    ]
+    // subNav: [
+    //   {
+    //     title: 'Users',
+    //     path: '/overview/users',
+    //     icon: <IoIcons.IoIosPaper />
+    //   },
+    //   {
+    //     title: 'Revenue',
+    //     path: '/overview/revenue',
+    //     icon: <IoIcons.IoIosPaper />
+    //   }
+    // ]
   },
   {
-    title: 'Reports',
-    path: '/reports',
+    title: 'Collection 1',
+    path: '/collection-one',
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
     subNav: [
       {
-        title: 'Reports',
-        path: '/reports/reports1',
+        title: 'Tank Wars',
+        path: '/collection-one/tankwars',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
       {
-        title: 'Reports 2',
-        path: '/reports/reports2',
+        title: 'Spiritopoly',
+        path: '/collection-one/spiritopoly',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
       {
-        title: 'Reports 3',
-        path: '/reports/reports3',
+        title: 'Augury Finance',
+        path: '/collection-one/auguryfinance',
         icon: <IoIcons.IoIosPaper />
       }
     ]
