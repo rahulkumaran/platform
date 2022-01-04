@@ -5,8 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import Sidebar from './components/Sidebar';
-import TopNav from './components/TopNav';
+import Sidebar from './components/nav/Sidebar';
+import TopNav from './components/nav/TopNav';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import { CollectionOne, TankWars, Spiritopoly, AuguryFinance } from './pages/collection-one';
