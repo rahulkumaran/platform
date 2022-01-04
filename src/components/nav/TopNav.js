@@ -130,6 +130,7 @@ export default TopNav;
 
 const Nav = styled.div`
   background: #15171c;
+  opacity: 0.9;
   position: sticky;
   top: 0;
   height: 90px;

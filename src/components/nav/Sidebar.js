@@ -29,29 +29,9 @@ const Sidebar = ({ showSidebar, closeSidebar }) => {
 
 export default Sidebar;
 
-const Nav = styled.div`
-  background: #15171c;
-  position: sticky;
-  top: 0;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const NavIcon = styled(Link)`
-  text-decoration: none;
-
-  margin-left: 2rem;
-  font-size: 2rem;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`;
-
 const SidebarNav = styled.nav`
   background: #15171c;
+  opacity: 0.9;
   width:  250px;
   height: 100vh;
   display: flex;
@@ -70,21 +50,3 @@ const SidebarNav = styled.nav`
 const SidebarWrap = styled.div`
   width: 100%;
 `;
-
-const SocialAnchor = styled.a`
-  margin-right: 20px;
-  &:hover {
-    opacity: 0.5;
-  }
-`
-const SocialsWrapper = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`
-const Logo = styled.h2`
-  color: white;
-`
