@@ -2,11 +2,19 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons/lib';
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+
 
 import twitterLogo from '../assets/twitter.jpg'
 import discordLogo from '../assets/discord.jpg'
 
-const TopNav = () => {
+const TopNav = ({ sidebarToggle, showSidebar }) => {
+
+ /*
+  TopNav component renders the top nav bar which holds the logo,
+  social icons and burger/close icons on smaller devices and 
+ */
 
  return (
   <>
@@ -18,7 +26,7 @@ const TopNav = () => {
 
      <SocialsWrapper>
       <SocialAnchor
-       href="https://twitter.com/FTMStonkSociety/"
+       href="#"
        target="_blank"
       >
        <img
@@ -27,7 +35,7 @@ const TopNav = () => {
         style={{ height: '40px', width: '40px' }}
        />
       </SocialAnchor>
-      <SocialAnchor href="https://discord.gg/9CubZShGJv" target="_blank">
+      <SocialAnchor href="#" target="_blank">
        <img
         src={discordLogo}
         alt="discord"
@@ -35,6 +43,13 @@ const TopNav = () => {
        />
       </SocialAnchor>
      </SocialsWrapper>
+
+     <NavIconCross to='#'>
+      {!showSidebar ?
+       <FaIcons.FaBars onClick={sidebarToggle} /> :
+       <AiIcons.AiOutlineClose onClick={sidebarToggle} />
+      }
+     </NavIconCross>
     </Nav>
    </IconContext.Provider>
   </>);
@@ -63,6 +78,12 @@ const NavIcon = styled(Link)`
   align-items: center;
 `;
 
+const NavIconCross = styled(NavIcon)`
+margin-right: 10px;
+@media (min-width: 850px) {
+ display: none;
+}
+`
 
 const SocialAnchor = styled.a`
   margin-right: 20px;
@@ -74,7 +95,7 @@ const SocialsWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     display: none;
   }
 `

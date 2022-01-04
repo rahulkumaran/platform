@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -13,13 +14,33 @@ import Team from './pages/Team';
 import Container from 'react-bootstrap/Container'
 
 function App() {
+
+  /*
+  setting the sidebar state in App as we are using 2 navs - topnav and sidenav
+  both the components share the same  state.
+ */
+
+  const [sidebar, setSidebar] = useState(false);
+  const sidebarToggle = () => setSidebar(!sidebar);
+
+  /* exclusively for mobile devices.
+  this function is used for closing the nav on mobile screen
+  once any menu item is clicked in the nav
+  */
+
+  const closeSidebar = (e) => {
+    if (sidebar == true) {
+      setSidebar(false)
+    }
+  }
+
   return (
     <Router>
-      <TopNav />
+      <TopNav sidebarToggle={sidebarToggle} showSidebar={sidebar} />
       <Container>
         <Row>
           <Col xs={1} md={3} lg={3} xl={3} xxl={2}>
-            <Sidebar />
+            <Sidebar showSidebar={sidebar} closeSidebar={closeSidebar} />
           </Col>
           <Col xs={11} md={9} lg={9} xl={9} xxl={10}>
             <Switch>
@@ -39,12 +60,3 @@ function App() {
 
 export default App;
 
-// const Container = styled.div`
-// max-width: 950px;
-// margin: 0;
-// margin-top: 20px;
-// margin-left: 260px;
-
-// @media (max-width: 850px) {
-//   margin-left: 20px;
-// }

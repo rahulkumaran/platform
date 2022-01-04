@@ -1,32 +1,25 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
 
 
-const Sidebar = () => {
-  const [sidebar, setSidebar] = useState(false);
-
-  const showSidebar = () => setSidebar(!sidebar);
-
+/* 
+  Sidebar component renders a fixed sidebar on medium and large devices
+  Sidebar component renders a toggleable sidebar which cover the entire screem on small and extra small edvices
+*/
+const Sidebar = ({ showSidebar, closeSidebar }) => {
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <SidebarNav sidebar={sidebar}>
+        <SidebarNav sidebar={showSidebar}>
           <SidebarWrap>
-            {/* <NavIcon to='#'>
-              <AiIcons.AiOutlineClose onClick={showSidebar} />
-            </NavIcon> */}
             {
               SidebarData.map((item, index) => {
-                return <SubMenu item={item} key={index} />;
+                return <SubMenu item={item} key={index} closeSidebar={closeSidebar} />;
               })}
-
-
 
           </SidebarWrap>
         </SidebarNav>
@@ -64,13 +57,13 @@ const SidebarNav = styled.nav`
   display: flex;
   justify-content: center;
   position: fixed;
-  // left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   left: 0;
   transition: 150ms;
   z-index: 10;
 
   @media (max-width: 850px) {
     width: 100vw;
+    left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   } 
 `;
 

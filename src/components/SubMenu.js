@@ -3,19 +3,25 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
-const SubMenu = ({ item }) => {
-  const [subnav, setSubnav] = useState(false);
+const SubMenu = ({ item, closeSidebar }) => {
 
+  /*
+    subMenu component renders the collapsable subnav on any nested nav item
+  */
+
+  const [subnav, setSubnav] = useState(false);
   const showSubnav = () => setSubnav(!subnav);
 
   return (
     <>
-      <SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
+      <SidebarLink to={item.path} onClick={(item.subNav ? showSubnav : closeSidebar)}>
         <div>
           {item.icon}
           <SidebarLabel>{item.title}</SidebarLabel>
         </div>
 
+
+        {/* This div is rendering the collapse and expand arrow icons on a nested nav item */}
         <div>
           {item.subNav && subnav
             ? item.iconOpened
@@ -23,14 +29,14 @@ const SubMenu = ({ item }) => {
               ? item.iconClosed
               : null}
         </div>
-
-
       </SidebarLink>
+
+      {/* Rendering the submenu list for any expandable menu item */}
       {
         subnav &&
         item.subNav.map((item, index) => {
           return (
-            <DropdownLink to={item.path} key={index}>
+            <DropdownLink to={item.path} key={index} onClick={closeSidebar}>
               {item.icon}
               <SidebarLabel >{item.title}</SidebarLabel>
             </DropdownLink>
