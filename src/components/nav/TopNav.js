@@ -137,6 +137,7 @@ const Nav = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 `;
 
 const NavIcon = styled(Link)`
@@ -171,7 +172,7 @@ const SocialsWrapper = styled.div`
   }
 `
 const Logo = styled.h2`
-  color: white;
+  color: #56c232;
 `
 
 const ConnectButton = styled.div`
