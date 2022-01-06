@@ -130,6 +130,7 @@ export default TopNav;
 
 const Nav = styled.div`
   background-color: rgba(43, 44, 48, 1);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   position: sticky;
   top: 0;
   height: 90px;

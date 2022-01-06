@@ -39,7 +39,8 @@ const SidebarNav = styled.nav`
   left: 0;
   transition: 150ms;
   z-index: 10;
-
+  box-shadow:  rgba(0, 0, 0, 1) 0px 6px 6px;
+  
   @media (max-width: 992px) {
     width: 100vw;
     left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
