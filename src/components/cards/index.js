@@ -4,7 +4,8 @@ import styled from 'styled-components'
 
 const Cards = ({ team }) => {
  return (
-  <Row xs={1} md={3} className="g-5">
+
+  <Row xs={1} md={2} l={2} xl={3} className="g-5">
    {team.map((_, idx) => (
     <Col>
      <CustomCard border="secondary">

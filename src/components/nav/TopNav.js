@@ -129,8 +129,7 @@ const TopNav = ({ sidebarToggle, showSidebar }) => {
 export default TopNav;
 
 const Nav = styled.div`
-  background: #15171c;
-  opacity: 0.9;
+  background-color: rgba(43, 44, 48, 1);
   position: sticky;
   top: 0;
   height: 90px;
@@ -138,6 +137,10 @@ const Nav = styled.div`
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+
+  @media (min-width: 992px) {
+    width: 100vw;
+   }
 `;
 
 const NavIcon = styled(Link)`

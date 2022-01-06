@@ -30,8 +30,7 @@ const Sidebar = ({ showSidebar, closeSidebar }) => {
 export default Sidebar;
 
 const SidebarNav = styled.nav`
-  background: #15171c;
-  opacity: 0.9;
+  background-color: rgba(43, 44, 48, 1);
   width:  250px;
   height: 100vh;
   display: flex;

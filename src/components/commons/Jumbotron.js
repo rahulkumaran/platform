@@ -9,7 +9,7 @@ export const Jumbotron = ({ title, text, image }) => (
   <Div>
     <Jumbo bg={image}>
       <InnerDiv class="p-5">
-        <h1 class="display-4 fw-bold">{title}</h1>
+        <h1 class="display-4 fw-bold" style={{ animation: 'float infinite 1.5s' }}>{title}</h1>
         <hr />
         <p>{text}</p>
       </InnerDiv>

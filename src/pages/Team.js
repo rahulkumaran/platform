@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from 'react-bootstrap'
 import Cards from '../components/cards/'
 import { Jumbotron } from '../components/commons/Jumbotron'
 
@@ -13,13 +14,13 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className='home'>
+    <Container>
       <Jumbotron
         title="Meet the Team"
         text="We Work hard so that you don't have to!"
       />
       <Cards team={teamMembers} />
-    </div>
+    </Container>
   );
 };
 
