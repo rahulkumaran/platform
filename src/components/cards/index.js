@@ -26,7 +26,7 @@ const Cards = ({ team }) => {
 export default Cards
 
 const CustomCard = styled(Card)`
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important;
 border-radius: 20px !important;
 `
 

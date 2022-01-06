@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col'
 
 import Sidebar from './components/nav/Sidebar';
 import TopNav from './components/nav/TopNav';
+import Footer from './components/footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import { CollectionOne, TankWars, Spiritopoly, AuguryFinance } from './pages/collection-one';
@@ -63,6 +64,7 @@ function App() {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </Router>
   );
 }
